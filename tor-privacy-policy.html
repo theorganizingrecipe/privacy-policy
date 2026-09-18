@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | The Organizing Recipe</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --coral: #FF7B5F;
+  --navy: #26447D;
+  --blue: #0084DD;
+  --cream: #FDF5ED;
+  --cream-dark: #F0E6D6;
+  --white: #fff;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Poppins',sans-serif; background:var(--cream); color:var(--navy); overflow-x:hidden; }
+
+/* HERO */
+.hero {
+  background:var(--navy);
+  padding:64px 24px 56px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute;
+  top:-100px; right:-100px;
+  width:320px; height:320px;
+  background:var(--coral); border-radius:50%; opacity:.09;
+}
+.hero::after {
+  content:''; position:absolute;
+  bottom:-80px; left:-80px;
+  width:260px; height:260px;
+  background:var(--blue); border-radius:50%; opacity:.11;
+}
+.badge {
+  display:inline-block;
+  background:var(--coral); color:#fff;
+  font-size:10px; font-weight:700;
+  letter-spacing:2.5px; text-transform:uppercase;
+  padding:8px 20px; border-radius:99px;
+  margin-bottom:24px;
+  position:relative; z-index:1;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(28px,6vw,44px);
+  font-weight:900; color:#fff;
+  line-height:1.2; margin-bottom:16px;
+  position:relative; z-index:1;
+}
+.hero-byline {
+  font-size:13px; font-weight:400;
+  color:rgba(255,255,255,.45);
+  position:relative; z-index:1;
+  letter-spacing:.5px;
+}
+.hero-byline span { color:var(--coral); font-weight:600; }
+
+/* NAV / TOC */
+.toc-wrap {
+  background:var(--white);
+  padding:32px 24px;
+  border-bottom:1px solid var(--cream-dark);
+}
+.toc-inner { max-width:680px; margin:0 auto; }
+.toc-label {
+  font-size:10px; font-weight:700;
+  letter-spacing:3px; text-transform:uppercase;
+  color:var(--coral); margin-bottom:14px;
+}
+.toc-list {
+  list-style:none;
+  display:flex; flex-wrap:wrap; gap:10px;
+}
+.toc-list a {
+  display:inline-block;
+  font-size:13px; font-weight:500;
+  color:var(--navy);
+  background:var(--cream);
+  border-radius:99px;
+  padding:8px 16px;
+  text-decoration:none;
+  transition:background .2s;
+}
+.toc-list a:hover { background:var(--cream-dark); }
+
+/* ARTICLE BODY */
+.article {
+  background:var(--cream);
+  padding:56px 24px 72px;
+}
+.article-inner {
+  max-width:680px;
+  margin:0 auto;
+}
+.updated-line {
+  font-size:13px; color:#7686a8;
+  margin-bottom:40px; font-weight:300;
+}
+.body-text p {
+  font-size:15px;
+  color:#4a5a7a;
+  line-height:1.9;
+  font-weight:300;
+  margin-bottom:22px;
+}
+.body-text p:last-child { margin-bottom:0; }
+.body-text strong { color:var(--navy); font-weight:600; }
+.body-text ul {
+  margin:0 0 22px 20px;
+  color:#4a5a7a;
+  font-size:15px;
+  line-height:1.9;
+  font-weight:300;
+}
+.body-text ul li { margin-bottom:8px; }
+.body-text ul strong { color:var(--navy); font-weight:600; }
+.body-text a { color:var(--blue); }
+
+section.policy-section {
+  margin-bottom:44px;
+  scroll-margin-top:24px;
+}
+.section-label {
+  font-size:10px; font-weight:700;
+  letter-spacing:3px; text-transform:uppercase;
+  color:var(--coral); margin-bottom:10px;
+}
+.policy-section h2 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(20px,4vw,26px);
+  font-weight:900; color:var(--navy);
+  line-height:1.25; margin-bottom:18px;
+}
+
+/* Highlight box */
+.highlight-box {
+  background:var(--white);
+  border-radius:16px;
+  padding:24px 24px;
+  margin:28px 0;
+  border-left:4px solid var(--coral);
+  box-shadow:0 4px 20px rgba(38,68,125,.06);
+}
+.highlight-box p {
+  font-size:14px;
+  color:var(--navy);
+  line-height:1.75;
+  font-weight:500;
+  margin:0;
+}
+
+/* Contact card */
+.contact-card {
+  background:var(--navy);
+  border-radius:20px;
+  padding:36px 28px;
+  margin-top:8px;
+}
+.contact-card p {
+  font-size:14px; color:rgba(255,255,255,.65);
+  line-height:1.85; font-weight:300;
+  margin-bottom:6px;
+}
+.contact-card p:last-child { margin-bottom:0; }
+.contact-card strong { color:#fff; font-weight:600; }
+.contact-card a { color:var(--coral); text-decoration:none; }
+
+/* FOOTER */
+footer {
+  background:#1a2f5e;
+  padding:30px 24px; text-align:center;
+}
+footer p {
+  font-size:10px; color:rgba(255,255,255,.28);
+  letter-spacing:2px; text-transform:uppercase;
+  line-height:1.8;
+}
+footer a { color:var(--coral); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">The Organizing Recipe</div>
+  <h1>Privacy Policy</h1>
+  <p class="hero-byline">Denver, CO · <span>theorganizingrecipe.com</span></p>
+</section>
+
+<!-- TOC -->
+<nav class="toc-wrap">
+  <div class="toc-inner">
+    <div class="toc-label">On this page</div>
+    <ul class="toc-list">
+      <li><a href="#info-we-collect">Information We Collect</a></li>
+      <li><a href="#how-we-use">How We Use It</a></li>
+      <li><a href="#sharing">Sharing</a></li>
+      <li><a href="#cookies">Cookies &amp; Ads</a></li>
+      <li><a href="#texts">Texts &amp; Calls</a></li>
+      <li><a href="#retention">Data Retention</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ARTICLE -->
+<section class="article">
+  <div class="article-inner">
+
+    <p class="updated-line">Last updated: September 2026</p>
+
+    <div class="body-text">
+      <p>The Organizing Recipe ("TOR," "we," "us," or "our") provides professional home organizing and decluttering services to clients in Denver, Colorado, and virtually to clients nationwide. This policy explains what personal information we collect, why we collect it, and how you can control it.</p>
+      <p>By submitting a form, texting a keyword, booking a service, or otherwise sharing information with us through our website, social media pages, or advertising, you agree to the practices described below.</p>
+    </div>
+
+    <section class="policy-section" id="info-we-collect">
+      <div class="section-label">01</div>
+      <h2>Information we collect</h2>
+      <div class="body-text">
+        <p>We collect information you provide directly to us, including:</p>
+        <ul>
+          <li><strong>Contact details:</strong> name, email address, phone number, and zip code, submitted through our website, lead forms on Facebook or Instagram, or direct message.</li>
+          <li><strong>Project details:</strong> the type of space you'd like organized, project descriptions, photos, and any other information you choose to share about your home or timeline.</li>
+          <li><strong>Booking and payment information:</strong> service package selected, appointment details, and billing information processed through our scheduling and payment providers.</li>
+          <li><strong>Communications:</strong> messages you send us by email, text, Instagram/Facebook DM, or ManyChat automation.</li>
+        </ul>
+        <p>We also collect limited technical information automatically when you visit our website or interact with our ads, such as browser type, device information, and general location, through cookies and similar tools described in the Cookies &amp; Ads section below.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="how-we-use">
+      <div class="section-label">02</div>
+      <h2>How we use your information</h2>
+      <div class="body-text">
+        <p>We use the information we collect to:</p>
+        <ul>
+          <li>Respond to inquiries and follow up on service requests</li>
+          <li>Schedule, confirm, and manage organizing appointments</li>
+          <li>Send project-related updates, reminders, and follow-up messages by email, text, or ManyChat</li>
+          <li>Process payments for booked services</li>
+          <li>Improve our services, content, and advertising based on general trends</li>
+          <li>Comply with legal and tax obligations</li>
+        </ul>
+        <p>We do not use your personal project details (photos of your home, family information, or anything shared during a consultation) for marketing without your separate, explicit permission.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="sharing">
+      <div class="section-label">03</div>
+      <h2>How we share information</h2>
+      <div class="body-text">
+        <p>We do not sell or rent your personal information. We share information only in the following situations:</p>
+        <ul>
+          <li><strong>Service providers:</strong> platforms that help us operate, such as our scheduling software, payment processor, email/SMS provider, and ManyChat, which process data on our behalf under their own security and privacy terms.</li>
+          <li><strong>Advertising platforms:</strong> when you submit a lead form on Facebook or Instagram, Meta processes that submission according to its own privacy policy in addition to ours.</li>
+          <li><strong>Legal requirements:</strong> if required by law, subpoena, or to protect the rights and safety of TOR, our clients, or the public.</li>
+          <li><strong>Business changes:</strong> in the event of a merger, acquisition, or sale of business assets, client information may be transferred as part of that transaction.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="policy-section" id="cookies">
+      <div class="section-label">04</div>
+      <h2>Cookies and advertising</h2>
+      <div class="body-text">
+        <p>Our website may use cookies and similar tracking technologies, including the Meta Pixel, to understand how visitors use our site and to measure the performance of our Facebook and Instagram ad campaigns. This may include tracking whether you visited our site after seeing an ad, or building lookalike audiences for future campaigns.</p>
+        <p>You can control cookies through your browser settings. You can also manage the ads you see from us through your Facebook or Instagram ad preferences.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="texts">
+      <div class="section-label">05</div>
+      <h2>Text messages, calls, and ManyChat</h2>
+      <div class="body-text">
+        <p>If you provide your phone number or interact with a ManyChat keyword automation, you agree that The Organizing Recipe may contact you by text message or phone call regarding your inquiry, booking, or related follow-up.</p>
+        <div class="highlight-box">
+          <p>Message and data rates may apply. Message frequency varies. You can opt out of text messages at any time by replying STOP, and request help by replying HELP.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="policy-section" id="retention">
+      <div class="section-label">06</div>
+      <h2>Data retention</h2>
+      <div class="body-text">
+        <p>We keep personal information for as long as needed to provide our services, maintain business and tax records as required by law, and respond to any future inquiries you may have. If you ask us to delete your information, we will do so unless we are required to retain it for legal or accounting purposes.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="rights">
+      <div class="section-label">07</div>
+      <h2>Your rights</h2>
+      <div class="body-text">
+        <p>If you are a Colorado resident, the Colorado Privacy Act gives you the right to:</p>
+        <ul>
+          <li>Confirm whether we process your personal information</li>
+          <li>Access, correct, or delete your personal information</li>
+          <li>Obtain a portable copy of your data</li>
+          <li>Opt out of the sale of personal information, targeted advertising, or profiling</li>
+        </ul>
+        <p>Residents of other states may have similar rights under their own applicable privacy laws. To exercise any of these rights, contact us using the information below. We will respond within the timeframe required by applicable law.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="contact">
+      <div class="section-label">08</div>
+      <h2>Contact us</h2>
+      <div class="body-text">
+        <p>If you have questions about this policy or how your information is handled, reach out to us:</p>
+      </div>
+      <div class="contact-card">
+        <p><strong>The Organizing Recipe</strong></p>
+        <p>Denver, Colorado</p>
+        <p>Email: <a href="mailto:hello@theorganizingrecipe.com">hello@theorganizingrecipe.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/theorganizingrecipe" target="_blank">@theorganizingrecipe</a></p>
+        <p>Website: <a href="https://theorganizingrecipe.com" target="_blank">theorganizingrecipe.com</a></p>
+      </div>
+    </section>
+
+    <div class="body-text">
+      <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with a revised "Last updated" date.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <a href="https://instagram.com/theorganizingrecipe" target="_blank">@theorganizingrecipe</a>
+    &nbsp;·&nbsp; Denver, CO &nbsp;·&nbsp;
+    <a href="https://theorganizingrecipe.com" target="_blank">theorganizingrecipe.com</a>
+  </p>
+</footer>
+
+</body>
+</html>
